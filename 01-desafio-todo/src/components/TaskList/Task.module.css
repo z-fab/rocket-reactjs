@@ -1,0 +1,44 @@
+.taskTodo, .taskCompleted {
+    background-color: var(--gray-500);
+    border: 1px solid var(--gray-400);
+    display: flex;
+    align-items: flex-start;
+    padding: 16px;
+    width: 100%;
+    border-radius: 8px;
+}
+
+.taskTodo p {
+    flex-grow: 1;
+    font-size: 0.875rem;
+}
+
+.check {
+    margin-right: 16px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer
+}
+
+.taskTodo .check {
+    color: var(--blue);
+}
+
+.taskCompleted p {
+    flex-grow: 1;
+    font-size: 0.875rem;
+    color: var(--gray-300);
+    text-decoration: line-through;
+}
+
+.taskCompleted .check {
+    color: var(--purple-dark);
+}
+
+.trash {
+    margin-left: 16px;
+    background-color: transparent;
+    border: none;
+    color: var(--gray-300);
+    cursor: pointer;
+}
