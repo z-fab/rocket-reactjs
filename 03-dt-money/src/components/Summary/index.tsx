@@ -1,39 +1,43 @@
 import {
-    ArrowCircleDown,
-    ArrowCircleUp,
-    CurrencyDollar,
+   ArrowCircleDown,
+   ArrowCircleUp,
+   CurrencyDollar,
 } from "@phosphor-icons/react";
 import { SummaryContainer, SummaryCard } from "./styles";
+import { currencyFormatter } from "../../utils/formatter";
+import { useSummary } from "../../hooks/useSummary";
 
 export function Summary() {
-    return (
-        <SummaryContainer>
-            <SummaryCard>
-                <header>
-                    <span>Entradas</span>
-                    <ArrowCircleUp size={32} color="#00b37e" />
-                </header>
+   const summary = useSummary();
 
-                <strong>R$ 17.400,00</strong>
-            </SummaryCard>
+   return (
+      <SummaryContainer>
+         <SummaryCard>
+            <header>
+               <span>Entradas</span>
+               <ArrowCircleUp size={32} color="#00b37e" />
+            </header>
 
-            <SummaryCard>
-                <header>
-                    <span>Saídas</span>
-                    <ArrowCircleDown size={32} color="#f75a68" />
-                </header>
+            <strong>{currencyFormatter.format(summary.income)}</strong>
+         </SummaryCard>
 
-                <strong>R$ 17.400,00</strong>
-            </SummaryCard>
+         <SummaryCard>
+            <header>
+               <span>Saídas</span>
+               <ArrowCircleDown size={32} color="#f75a68" />
+            </header>
 
-            <SummaryCard variant="green">
-                <header>
-                    <span>Total</span>
-                    <CurrencyDollar size={32} color="#fff" />
-                </header>
+            <strong>{currencyFormatter.format(summary.outcome)}</strong>
+         </SummaryCard>
 
-                <strong>R$ 17.400,00</strong>
-            </SummaryCard>
-        </SummaryContainer>
-    );
+         <SummaryCard variant="green">
+            <header>
+               <span>Total</span>
+               <CurrencyDollar size={32} color="#fff" />
+            </header>
+
+            <strong>{currencyFormatter.format(summary.total)}</strong>
+         </SummaryCard>
+      </SummaryContainer>
+   );
 }
