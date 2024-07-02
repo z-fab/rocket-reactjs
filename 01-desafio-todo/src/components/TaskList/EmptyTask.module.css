@@ -1,0 +1,20 @@
+.emptyTask {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: var(--gray-300);
+  margin-top: 24px;
+}
+
+.emptyTask p {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-top: 24px;
+
+}
+.emptyTask sub {
+    margin-top: 4px;
+    font-size: 0.875rem;
+}

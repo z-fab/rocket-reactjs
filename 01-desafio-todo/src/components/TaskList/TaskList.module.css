@@ -1,0 +1,47 @@
+.tasksList {
+    width: 881px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 16px;
+}
+
+.tasksContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 24px;
+    gap: 12px
+}
+
+.tasksInfo {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--gray-400);
+}
+
+.tasksInfo p {
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.tasksInfo p span {
+    background-color: var(--gray-400);
+    padding: 3px 8px;
+    border-radius: 999px;
+    margin-left: 8px;
+    color: var(--gray-200);
+    font-size: 0.75rem;
+}
+
+.numberTask {
+    color: var(--blue);
+}
+
+
+.numberComplete {
+    color: var(--purple);
+}
